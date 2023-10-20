@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Upload e Processamento de CSV</title>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body>
+      <div class="background">
+         <div class="form-container">
+            <h1>Envie o arquivo CNAB CSV</h1>
+            <form
+               action="/parse-csv/process_upload.php"
+               method="post"
+               enctype="multipart/form-data"
+            >
+               <div class="file-upload">
+                  <label for="csvFile" class="custom-file-upload">
+                     Escolher Arquivo
+                  </label>
+                  <input
+                     type="file"
+                     name="csvFile"
+                     id="csvFile"
+                     accept=".csv"
+                     data-filename=""
+                  />
+               </div>
+               <input type="submit" value="Enviar" />
+            </form>
+         </div>
+      </div>
+   </body>
+</html>
